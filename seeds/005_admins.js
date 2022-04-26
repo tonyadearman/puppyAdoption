@@ -2,10 +2,10 @@
 const faker = require('faker');
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('admins_talbe').truncate()
+  return knex('admins').truncate()
     .then(function () {
       // Inserts seed entries
-      return knex('admins_table').insert([
+      return knex('admins').insert([
        {
        "kennel_id": 1,
        "username": faker.internet.userName(),
