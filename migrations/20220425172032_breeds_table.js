@@ -1,16 +1,14 @@
-//Breeds seed file 
-const faker = require('faker');
-exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
-  return knex('breeds_table').truncate()
-    .then(function () {
-      // Inserts seed entries
-      return knex('breeds_table').insert([
-        {"name": faker.commerce.color()},
-        {"name": faker.commerce.color()},
-        {"name": faker.commerce.color()},
-        {"name": faker.commerce.color()},
-        {"name": faker.commerce.color()}
-      ]);
-    });
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+ exports.up = function(knex, Promise) {
+    return knex.schema.createTable('breeds', function(tbl){   
+        tbl.increments('id').primary();    
+        tbl.string("name", 255).notNullable();
+  })
+};
+
+exports.down = function(knex, Promise) {
+    return knex.schema.dropTableIfExists('breeds');
 };

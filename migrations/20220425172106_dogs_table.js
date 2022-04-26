@@ -1,61 +1,21 @@
-//Dogs seed file 
-const faker = require('faker');
-exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
-  return knex('dogs_table').truncate()
-    .then(function () {
-      // Inserts seed entries
-      return knex('dogs_table').insert([
-        {
-          "name": faker.name.firstName(),
-          "kennel_id": faker.random.number({'min': 1, 'max': 3}) ,
-          "bio": faker.lorem.paragraph(),
-          "age": faker.random.number({'min': 1, 'max': 20}) ,
-          "size": 'small',
-          "male": faker.random.boolean() ,
-          "price": faker.random.number({'min': 0, 'max': 200}),
-          "img_url": faker.image.animals(), 
-        },
-        {
-          "name": faker.name.firstName(),
-          "kennel_id": faker.random.number({'min': 1, 'max': 3}) ,
-          "bio": faker.lorem.paragraph(),
-          "age": faker.random.number({'min': 1, 'max': 20}) ,
-          "size": 'medium',
-          "male": faker.random.boolean() ,
-          "price": faker.random.number({'min': 0, 'max': 200}),
-          "img_url": faker.image.animals(), 
-        },
-        {
-          "name": faker.name.firstName(),
-          "kennel_id": faker.random.number({'min': 1, 'max': 3}) ,
-          "bio": faker.lorem.paragraph(),
-          "age": faker.random.number({'min': 1, 'max': 20}) ,
-          "size": 'large',
-          "male": faker.random.boolean() ,
-          "price": faker.random.number({'min': 0, 'max': 200}),
-          "img_url": faker.image.animals(), 
-        },
-        {
-          "name": faker.name.firstName(),
-          "kennel_id": faker.random.number({'min': 1, 'max': 3}) ,
-          "bio": faker.lorem.paragraph(),
-          "age": faker.random.number({'min': 1, 'max': 20}) ,
-          "size": 'small',
-          "male": faker.random.boolean() ,
-          "price": faker.random.number({'min': 0, 'max': 200}),
-          "img_url": faker.image.animals(), 
-        },
-        {
-          "name": faker.name.firstName(),
-          "kennel_id": faker.random.number({'min': 1, 'max': 3}) ,
-          "bio": faker.lorem.paragraph(),
-          "age": faker.random.number({'min': 1, 'max': 20}) ,
-          "size": 'large',
-          "male": faker.random.boolean() ,
-          "price": faker.random.number({'min': 0, 'max': 200}),
-          "img_url": faker.image.animals(), 
-        }
-      ]);
-    });
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+ exports.up = function(knex, Promise) {
+    return knex.schema.createTable('dogs', function(tbl){   
+        tbl.increments('id').primary();    
+        tbl.integer('kennel_id').unsigned().notNullable().references('id').inTable('kennels') 
+        tbl.string("bio", 500);
+        tbl.string("name", 500);
+        tbl.integer("Age");    
+        tbl.string("Size", 100);   
+        tbl.boolean("male");  
+        tbl.integer("Price"); 
+        tbl.string("img_url", 255);  
+  })
+};
+
+exports.down = function(knex, Promise) {
+    return knex.schema.dropTableIfExists('dogs');
 };

@@ -1,35 +1,15 @@
-//Dog_Breeds seed file 
-const faker = require('faker');
-exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
-  return knex('dog_breeds_table').truncate()
-    .then(function () {
-      // Inserts seed entries
-      return knex('dog_breeds_table').insert([
-        {
-         "breed_id": faker.random.number({'min': 1, 'max': 5}),
-         "dog_id": 1,
-        },
-        {
-         "breed_id": faker.random.number({'min': 1, 'max': 5}),
-         "dog_id": 2,
-        },
-        {
-         "breed_id": faker.random.number({'min': 1, 'max': 5}),
-         "dog_id": 3,
-        },
-        {
-         "breed_id": faker.random.number({'min': 1, 'max': 5}),
-         "dog_id": 4,
-        },
-        {
-         "breed_id": faker.random.number({'min': 1, 'max': 5}),
-         "dog_id": 5,
-        },
-         {
-         "breed_id": faker.random.number({'min': 1, 'max': 5}),
-         "dog_id": 5,
-        }
-      ]);
-    });
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+ exports.up = function(knex, Promise) {
+    return knex.schema.createTable('dog_breeds', function(tbl){   
+        tbl.increments('id').primary();    
+        tbl.integer('breed_id').unsigned().notNullable().references('id').inTable('breeds') 
+        tbl.integer('dog_id').unsigned().notNullable().references('id').inTable('dogs') 
+  })
+};
+
+exports.down = function(knex, Promise) {
+    return knex.schema.dropTableIfExists('dog_breeds');
 };

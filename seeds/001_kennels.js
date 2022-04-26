@@ -2,10 +2,10 @@
 const faker = require('faker');
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('kennels_table').truncate()
+  return knex('kennels').truncate()
     .then(function () {
       // Inserts seed entries
-      return knex('kennels_table').insert([
+      return knex('kennels').insert([
         {
           "name": faker.name.findName(),
           "bio": faker.lorem.paragraph(),
