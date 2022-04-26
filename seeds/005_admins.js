@@ -12,10 +12,41 @@ exports.seed = function(knex, Promise) {
        "password": faker.internet.password(),
        },
        {
+        "kennel_id": 1,
+        "username": faker.internet.userName(),
+        "password": faker.internet.password(),
+        },
+       {
        "kennel_id": 2,
        "username": faker.internet.userName(),
        "password": faker.internet.password(),
        },
+       {
+        "kennel_id": 1,
+        "username": faker.internet.userName(),
+        "password": faker.internet.password(),
+        },
+               {
+       "kennel_id": 1,
+       "username": faker.internet.userName(),
+       "password": faker.internet.password(),
+       },
+       {
+        "kennel_id": 1,
+        "username": faker.internet.userName(),
+        "password": faker.internet.password(),
+        },
+        
+        {
+          "kennel_id": 1,
+          "username": faker.internet.userName(),
+          "password": faker.internet.password(),
+          },
+          {
+            "kennel_id": 1,
+            "username": faker.internet.userName(),
+            "password": faker.internet.password(),
+            },
        {
        "kennel_id": 3,
        "username": faker.internet.userName(),

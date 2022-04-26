@@ -26,6 +26,91 @@ exports.seed = function(knex, Promise) {
          "breed_id": faker.random.number({'min': 1, 'max': 5}),
          "dog_id": 5,
         },
+        {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         {
+          "breed_id": faker.random.number({'min': 1, 'max': 5}),
+          "dog_id": 1,
+         },
+         
          {
          "breed_id": faker.random.number({'min': 1, 'max': 5}),
          "dog_id": 5,

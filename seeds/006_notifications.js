@@ -13,6 +13,133 @@ exports.seed = function(knex, Promise) {
           "date_sent": faker.date.recent()  
         },
         {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        
+        {
           "admin_id": 2,
           "email": faker.internet.email(),
           "message": faker.lorem.sentences(),
