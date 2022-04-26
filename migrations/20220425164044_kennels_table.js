@@ -1,18 +1,35 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
- exports.up = function(knex, Promise) {
-    return knex.schema.createTable('kennels', function(tbl){   
-           tbl.increments('id').primary();    
-           tbl.string("name",  255).notNullable()    
-           tbl.string("bio", 500);
-           tbl.string("location", 500);    
-           tbl.string("email", 255);   
-           tbl.string("phone", 255);  
-           tbl.string("img_url", 255);
-      })
-   };
-   exports.down = function(knex, Promise) {
-     return knex.schema.dropTableIfExists('kennels');
-   };
+//Kennels seed file 
+const faker = require('faker');
+exports.seed = function(knex, Promise) {
+  // Deletes ALL existing entries
+  return knex('kennels_table').truncate()
+    .then(function () {
+      // Inserts seed entries
+      return knex('kennels_table').insert([
+        {
+          "name": faker.company.companyName(),
+          "bio": faker.lorem.paragraph(),
+          "location": faker.address.state() ,
+          "email": faker.internet.email(),
+          "phone": faker.phone.phoneNumberFormat(),
+          "img_url": faker.image.city(),
+        },
+        {
+          "name": faker.company.companyName(),
+          "bio": faker.lorem.paragraph(),
+          "location": faker.address.state() ,
+          "email": faker.internet.email(),
+          "phone": faker.phone.phoneNumberFormat(),
+          "img_url": faker.image.city(),
+        },
+        {
+          "name": faker.company.companyName(),
+          "bio": faker.lorem.paragraph(),
+          "location": faker.address.state() ,
+          "email": faker.internet.email(),
+          "phone": faker.phone.phoneNumberFormat(),
+          "img_url": faker.image.city(),
+        }
+      ]);
+    });
+};

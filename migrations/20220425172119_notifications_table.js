@@ -1,17 +1,29 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
- exports.up = function(knex, Promise) {
-    return knex.schema.createTable('notifications', function(tbl){   
-        tbl.increments('id').primary();    
-        tbl.integer('admin_id').unsigned().notNullable().references('id').inTable('admins');
-        tbl.string("email", 255).notNullable();
-        tbl.string("message", 500);
-        tbl.date("date_sent");
-  })
-};
-
-exports.down = function(knex, Promise) {
-    return knex.schema.dropTableIfExists('notifications');
+//Notifications seed file 
+const faker = require('faker');
+exports.seed = function(knex, Promise) {
+  // Deletes ALL existing entries
+  return knex('notifications_table').truncate()
+    .then(function () {
+      // Inserts seed entries
+      return knex('notifications_table').insert([
+        {
+          "admin_id": 1,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()  
+        },
+        {
+          "admin_id": 2,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()     
+        },
+        {
+          "admin_id": 3,
+          "email": faker.internet.email(),
+          "message": faker.lorem.sentences(),
+          "date_sent": faker.date.recent()    
+        }
+      ]);
+    });
 };
