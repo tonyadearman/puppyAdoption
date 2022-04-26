@@ -1,15 +1,35 @@
-// const faker = require('faker');
-
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
- */
-exports.seed = async function(knex) {
+//Kennels seed file 
+const faker = require('faker');
+exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  await knex('kennels_table').truncate()
-  await knex('table_name').insert([
-    {id: 1, colName: 'rowValue1'},
-    {id: 2, colName: 'rowValue2'},
-    {id: 3, colName: 'rowValue3'}
-  ]);
+  return knex('kennels_table').truncate()
+    .then(function () {
+      // Inserts seed entries
+      return knex('kennels_table').insert([
+        {
+          "name": faker.name.findName(),
+          "bio": faker.lorem.paragraph(),
+          "location": faker.address.state() ,
+          "email": faker.internet.email(),
+          "phone": faker.phone.phoneNumberFormat(),
+          "img_url": faker.image.city(),
+        },
+        {
+          "name": faker.name.findName(),
+          "bio": faker.lorem.paragraph(),
+          "location": faker.address.state() ,
+          "email": faker.internet.email(),
+          "phone": faker.phone.phoneNumberFormat(),
+          "img_url": faker.image.city(),
+        },
+        {
+          "name": faker.name.findName(),
+          "bio": faker.lorem.paragraph(),
+          "location": faker.address.state() ,
+          "email": faker.internet.email(),
+          "phone": faker.phone.phoneNumberFormat(),
+          "img_url": faker.image.city(),
+        }
+      ]);
+    });
 };
