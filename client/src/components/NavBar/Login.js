@@ -2,17 +2,16 @@ import React from 'react';
 
 
 
-const Navbar = () => {
+const Login = () => {
 
 
   return (
     <div>
-
+Login
 
     </div>
   );
 };
 
 
-export default Navbar;
-
+export default Login;
