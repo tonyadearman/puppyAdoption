@@ -22,7 +22,7 @@ function NavBar() {
         <nav className='navbar'>
         {/* <img src={Logo} className='logo' alt=''/> */}
           <div className='navbar-container'>
-            <a href="#" className='brand-title'>Puppy Connection Logo</a>
+            <a href="#" className='brand-title'>Puppy Connection</a>
             <button onClick={(e) => { handleNavbarButton(e); }} className='navbar-toggler'>
               <span className='navbar-toggler-icon'></span>
             </button>
@@ -38,10 +38,10 @@ function NavBar() {
                   <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/contact'>Contact</NavLink>
                 </li>
                 <li className='nav-item'>
-                  <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/register'>Register</NavLink>
+                  <button activeClassName='is-active' exact={true} className='nav-link-button' to='/register'>Register</button>
                 </li>
                 <li className='nav-item'>
-                  <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/login'>Login</NavLink>
+                  <button activeClassName='is-active' exact={true} className='nav-link-button' to='/login'>Login</button>
                 </li>
               </ul>
             </div>
