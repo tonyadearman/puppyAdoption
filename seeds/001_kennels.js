@@ -1,4 +1,5 @@
 //Kennels seed file 
+// update database npx knex seed:run
 const faker = require('faker');
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
