@@ -7,7 +7,7 @@
     flex-direction: row;
     align-items: flex-end;
     margin-top: 3rem;
-    margin-left: 5.5rem;
+    padding: 0vw 5vw 0vw 7vw;
 }
 
 .logo {
@@ -32,7 +32,7 @@ h1 {
 
 .login-reg {
     background-color: #06c3bd;
-    padding: 0 1rem 0 1rem;
+    padding-left: 1rem;
     height: 2rem;
     border-radius: 5px;
     color: white;
