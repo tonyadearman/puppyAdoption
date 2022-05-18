@@ -1,0 +1,48 @@
+.flipcards{
+   box-sizing: border-box;
+}
+
+.flipcard__container{
+    /* max-width: fit-content; */
+    display: grid;
+    grid-template-columns: repeat(5, .5fr);
+    gap: 2rem;
+    
+}
+.flipcard{
+    width: 200px;
+    height: 250px;
+    padding: 1.3rem;
+    border-radius: 2rem;
+    box-shadow:0 2px 2px gray;
+    perspective: 1000px;
+}
+
+ .flipcard__img{
+    /* max-width: 250px; */
+    border-radius: 1rem;
+    
+    
+  } 
+.flipcard__inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flipcard:hover .flipcard__inner{
+    transform: rotateY(180deg);
+}
+.flipcard__front, .flipcard__back{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    backface-visibility: hidden;
+}
+.flipcard__back{
+    transform: rotateY(180deg);
+    text-align: justify;
+    font-size: 12px;
+}
