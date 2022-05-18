@@ -4,6 +4,7 @@ import {GiSittingDog} from 'react-icons/gi'
 import {FaTruckPickup} from 'react-icons/fa'
 import './CTA.css'
 
+
 const CTA = () => {
   return (
     <div className="flex-container">
