@@ -1,0 +1,27 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #cdf2f2;
+    padding: 2rem 10rem 2rem 10rem;
+}
+
+.cta_box {
+    padding: 2rem;
+    border-left: 2px solid #3c6563;
+}
+
+.search {
+    border-left: none;
+}
+
+.cta_icon {
+    font-size: 2rem;
+    color: #3c6563;
+    
+}
+
+h4, p {
+    color: #3c6563;
+}
+
