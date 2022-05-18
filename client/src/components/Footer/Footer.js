@@ -1,13 +1,12 @@
 import React from 'react'
 import './Footer.css'
-import lazyDogs from '../../images/lazyDogs.png'
+import dogbanner from '../../images/dogbanner.png'
 
 const Footer = () => {
   return (
     <div className='flex-container footer_container'>
-        <img src={lazyDogs} alt='lazy dogs' />
-
-
+        <img src={dogbanner} alt='lazy dogs' />
+         <div className='contact-header'>Contact Us</div>
     </div>
   )
 }

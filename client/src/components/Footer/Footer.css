@@ -2,4 +2,21 @@
     display: flex;
     flex-direction: row;
     background-color: #03bab8;
+    position: relative;
+    text-align: center;
+    color: #de234e;
+    text-shadow: 2px 2px 2px #3c6563;
+    font-family: 'Lemonada', cursive;
+    font-size: 40px;
+}
+
+.contact-header {
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #3c6563;
+    padding: 0px 15px 0px 15px;
+    border-radius: 5px;
+    
 }
