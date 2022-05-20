@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from './components/NavBar/Nav';
+import CTA from './components/CTA/CTA';
 import './App.css';
 
 function App() {
   return (
-    <div>
-    <NavBar />
+    <div className="App">
+      <CTA />
     </div>
   );
 
