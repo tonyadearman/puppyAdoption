@@ -18,10 +18,16 @@
 .cta_icon {
     font-size: 2rem;
     color: #3c6563;
-    
+    margin-left: 45%;
+}
+
+h4 {
+    font-family: 'Lemonada', cursive;
+    font-weight: bolder;
 }
 
 h4, p {
     color: #3c6563;
+    text-align: center;
 }
 
