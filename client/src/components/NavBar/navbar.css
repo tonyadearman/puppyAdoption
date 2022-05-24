@@ -1,15 +1,11 @@
-nav.navbar {
+/* nav.navbar {
     background: whitesmoke;
     height: 120px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     font-size: 17px;
     
   }
-  /* .logo {
-    height: 90px;
-    padding: .2rem
-  } */
-
+ 
 .brand-title {
   margin-top: 50px;
   font-family: 'Charm', cursive;
@@ -132,4 +128,4 @@ nav.navbar {
       width: 0;
       overflow: hidden;
     }
-  }
+  } */
